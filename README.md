@@ -1,14 +1,28 @@
 # Proyecto Pseudoaleatorios
 
-Este proyecto contiene un script en Python para la generación y análisis de números pseudoaleatorios, usando librerías como `numpy` y `scipy`. También utiliza `tkinter` para la interfaz gráfica.
+Generador y analizador de números pseudoaleatorios en Python. Incluye algoritmos clásicos, interfaz gráfica y utilidades para simulación y análisis estadístico.
+
+---
+
+## Características principales
+- Generadores: Cuadrados Medios, Productos Medios, Multiplicador Constante
+- Interfaz gráfica con Tkinter
+- Análisis estadístico y visualización
+- Modular y extensible
 
 ---
 
 ## Requisitos
 
-- Python 3.7 o superior
-- numpy
-- scipy
+- Python 3.7 o superior (recomendado 3.12)
+- Las siguientes librerías:
+  - numpy
+  - scipy
+  - matplotlib
+  - pandas
+  - openpyxl
+  - pillow
+  - tkinter (incluida en la mayoría de instalaciones de Python)
 
 ---
 
@@ -22,19 +36,19 @@ Este proyecto contiene un script en Python para la generación y análisis de n�
 cd ruta\al\proyecto
 ```
 
-3. Crea y activa un entorno virtual (opcional, pero recomendado):
+3. Crea y activa un entorno virtual (recomendado):
 
 **En Windows (PowerShell):**
 ```powershell
+
 py -m venv .venv
 .\.venv\Scripts\Activate.ps1
 ```
-Si se tiene errores al ejecutar el anterior comando, se debe ejecutar el siguiente comando en modo administrador:
+Si tienes errores al activar, ejecuta en modo administrador:
 ```powershell
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 ```
-colocar S y asi se ejecuta el Activate.ps1 sin problemas
-
+Responde S para permitir la ejecución.
 
 **En Linux/MacOS:**
 ```bash
@@ -48,6 +62,11 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+Si falta alguna librería, instálala manualmente:
+```bash
+pip install matplotlib pandas openpyxl pillow
+```
+
 ---
 
 ## Uso
@@ -55,12 +74,43 @@ pip install -r requirements.txt
 Para ejecutar el script principal, asegúrate de estar en el entorno virtual y en la carpeta del proyecto, luego corre:
 
 ```powershell
-python pseudoaleatorios.py
+C:/Users/Alvaro/Desktop/Proyectos_Sumulacion/PseudoAleatorios/.venv/Scripts/python.exe psedoaleatorios.py
 ```
+
 --- 
+
+## Estructura del proyecto
+
+```
+PseudoAleatorios/
+├── pseudoaleatorios/           # Módulos principales
+│   ├── generadores/           # Algoritmos de generación
+│   ├── interfaces/            # Interfaces y distribuciones
+│   ├── gui.py                 # Interfaz gráfica
+│   ├── generators.py          # Lógica de generadores
+│   └── tests.py               # Pruebas
+├── psedoaleatorios.py         # Script principal
+├── requirements.txt           # Dependencias
+└── README.md                  # Documentación
+```
+
+---
 
 ## Notas
 
-Asegúrate de tener instaladas las librerías listadas en requirements.txt.
+- El script usa tkinter para la interfaz gráfica.
+- Si usas otro entorno virtual, ajusta la ruta del ejecutable.
+- Para pruebas, ejecuta:
+```powershell
+C:/Users/Alvaro/Desktop/Proyectos_Sumulacion/PseudoAleatorios/.venv/Scripts/python.exe pseudoaleatorios/tests.py
+```
 
-El script usa tkinter para la interfaz gráfica, que viene incluida en la mayoría de las instalaciones estándar de Python.
+---
+
+## Autor
+Alvaro
+
+---
+
+## Licencia
+MIT
