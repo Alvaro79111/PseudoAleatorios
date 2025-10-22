@@ -29,6 +29,12 @@ cd ruta\al\proyecto
 py -m venv .venv
 .\.venv\Scripts\Activate.ps1
 ```
+Si se tiene errores al ejecutar el anterior comando, se debe ejecutar el siguiente comando en modo administrador:
+```powershell
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+```
+colocar S y asi se ejecuta el Activate.ps1 sin problemas
+
 
 **En Linux/MacOS:**
 ```bash
